@@ -15,3 +15,9 @@ resource "zerotier_member" "phone" {
   name        = "phone"
   member_id   = "2dca25d5e2"
 }
+
+resource "zerotier_member" "macbook" {
+  network_id  = zerotier_network.private.id
+  name        = "macbook"
+  member_id   = "82312852d0"
+}
