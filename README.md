@@ -1,7 +1,5 @@
 # Virtual Networks
 
-![Terraform](https://github.com/khuedoan/virtual-networks/actions/workflows/terraform.yml/badge.svg)
-
 ## Prerequisites
 
 - Accounts:
