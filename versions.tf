@@ -18,5 +18,5 @@ terraform {
 }
 
 provider "zerotier" {
-  zerotier_central_token = var.zerotier_central_token
+  # Authenticate using the ZEROTIER_CENTRAL_TOKEN environment variable
 }
