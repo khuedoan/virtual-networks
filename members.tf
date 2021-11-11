@@ -1,0 +1,17 @@
+resource "zerotier_member" "laptop" {
+  network_id  = zerotier_network.private.id
+  name        = "laptop"
+  member_id   = "4e464fc534"
+}
+
+resource "zerotier_member" "desktop" {
+  network_id  = zerotier_network.private.id
+  name        = "desktop"
+  member_id   = "5240e0cebe"
+}
+
+resource "zerotier_member" "phone" {
+  network_id  = zerotier_network.private.id
+  name        = "phone"
+  member_id   = "2dca25d5e2"
+}
