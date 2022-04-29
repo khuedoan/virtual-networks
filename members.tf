@@ -7,7 +7,7 @@ resource "zerotier_member" "laptop" {
 resource "zerotier_member" "desktop" {
   network_id = zerotier_network.private.id
   name       = "desktop"
-  member_id  = "7221edfe12"
+  member_id  = "1fbc0d6a4c"
 }
 
 resource "zerotier_member" "phone" {
