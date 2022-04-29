@@ -1,3 +1,9 @@
+resource "zerotier_member" "router" {
+  network_id = zerotier_network.private.id
+  name       = "router"
+  member_id  = "235eb72d6f"
+}
+
 resource "zerotier_member" "laptop" {
   network_id = zerotier_network.private.id
   name       = "laptop"
@@ -13,7 +19,7 @@ resource "zerotier_member" "desktop" {
 resource "zerotier_member" "phone" {
   network_id = zerotier_network.private.id
   name       = "phone"
-  member_id  = "2dca25d5e2"
+  member_id  = "20b7684e3b"
 }
 
 resource "zerotier_member" "macbook" {
