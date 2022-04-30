@@ -1,7 +1,16 @@
+locals {
+  router_ip = "192.168.191.1"
+}
+
 resource "zerotier_member" "router" {
-  network_id = zerotier_network.private.id
-  name       = "router"
-  member_id  = "235eb72d6f"
+  network_id              = zerotier_network.private.id
+  name                    = "router"
+  member_id               = "235eb72d6f"
+  allow_ethernet_bridging = true
+  no_auto_assign_ips      = true
+  ip_assignments = [
+    local.router_ip
+  ]
 }
 
 resource "zerotier_member" "laptop" {
