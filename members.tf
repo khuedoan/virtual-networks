@@ -2,6 +2,26 @@ locals {
   router_ip = "192.168.191.1"
 }
 
+# TODO automate this on the router
+#
+#  docker run \                                                                                                                                                         <<<
+# --name zerotier \
+# -d \
+# --rm \
+# --cap-add=NET_ADMIN \
+# --device /dev/net/tun \
+# --volume zerotier-data:/var/lib/zerotier-one \
+# zerotier/zerotier:latest \
+# xxx
+#
+# docker exec -it zerotier bash
+#
+# export PHY_IFACE=eth0
+# export ZT_IFACE=xxx
+#
+# iptables -t nat -A POSTROUTING -o $PHY_IFACE -j MASQUERADE
+# iptables -A FORWARD -i $PHY_IFACE -o $ZT_IFACE -m state --state RELATED,ESTABLISHED -j ACCEPT
+# iptables -A FORWARD -i $ZT_IFACE -o $PHY_IFACE -j ACCEPT
 resource "zerotier_member" "router" {
   network_id              = zerotier_network.private.id
   name                    = "router"
