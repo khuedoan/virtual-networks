@@ -1,5 +1,5 @@
 locals {
-  router_ip = "192.168.191.1"
+  router_ip = "192.168.191.131"
 }
 
 # TODO automate this on the router
@@ -18,6 +18,8 @@ locals {
 #
 # export PHY_IFACE=eth0
 # export ZT_IFACE=xxx
+#
+# apt install -y iptables
 #
 # iptables -t nat -A POSTROUTING -o $PHY_IFACE -j MASQUERADE
 # iptables -A FORWARD -i $PHY_IFACE -o $ZT_IFACE -m state --state RELATED,ESTABLISHED -j ACCEPT
