@@ -27,7 +27,7 @@ locals {
 resource "zerotier_member" "router" {
   network_id              = zerotier_network.private.id
   name                    = "router"
-  member_id               = "235eb72d6f"
+  member_id               = "423d0ed97d"
   allow_ethernet_bridging = true
   no_auto_assign_ips      = true
   ip_assignments = [
@@ -56,5 +56,5 @@ resource "zerotier_member" "phone" {
 resource "zerotier_member" "macbook" {
   network_id = zerotier_network.private.id
   name       = "macbook"
-  member_id  = "82312852d0"
+  member_id  = "57b0c801d7"
 }
